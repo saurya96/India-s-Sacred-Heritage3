@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Divine Heritage</title>
+<!-- External CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/css/lightbox.min.css" />
+  <link rel="stylesheet" href="style.css" />
+
+
+</head>
+
+<body>
+
+  <!-- ⬇️ Add here -->
+  <div id="sidebarToggle" onclick="toggleSidebar()">☰</div>
+  <div id="sidebar">
+    <a href="#home">Home</a>
+    <a href="#gallerySection">Photo Gallery</a>
+    <a href="#timeline">Timeline</a>
+    <a href="#monuments">Temples & Monuments</a>
+    <a href="#map-section">Map</a>
+    <a href="#contact">Contact Us</a>
+    <a href="#about">About</a>
+  </div>
+
+  <!-- HEADER -->
+  <header id="home">
+    <div class="text-center">
+      <h1 class="display-3">Welcome to India’s Sacred Heritage</h1>
+      <p class="intro">Explore Temples, Forts, and Palaces Across Time</p>
+      <!-- <button class="scroll-down">Explore</button> -->
+       <button onclick="scrollToExplore()" class="explore-btn">Explore <span class="arrow">↓</span></button> 
+
+    </div>
+  </header>
+
+
+
+  <section id="gallerySection"></section>
+  <h1 class="gallery-title">📸 Historical Monuments & Temples Gallery</h1>  
+
+  <div class="gallery-container">
+    <!--- Example Image 1-->
+    <div class="gallery-item">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43syc8zmh/107%20taj%20mahahl.jpg" alt="Taj Mahal">
+      <p>Taj Mahal, Agra</p>
+    </div>
+
+    <!-- Example Image 2 -->
+    <div class="gallery-item">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43syc8zmh/108%20qutab%20minar.jpeg" alt="Qutub Minar">
+      <p>Qutub Minar, Delhi</p>
+    </div>
+
+    <!-- Example Image 3 -->
+    <div class="gallery-item">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43syc8zmh/109%20kedernath%20nath.webp" alt="Kedarnath Temple">
+      <p>Kedarnath Temple, Uttarakhand</p>
+    </div>
+
+    <!-- example 4 -->
+    <div class="gallery-item">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43syc8zmh/konark-temple-puri-odisha-2-attr-hero.jpeg"
+        alt="Konark Sun Temple">
+      <p>Konark Sun Temple, Odisha</p>
+    </div>
+    <!-- example 5 -->
+    <div class="gallery-item">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43syc8zmh/nidhivan-1.jpg" alt="Nidhi Van">
+      <p>Nidhi Van</p>
+    </div>
+
+    <!-- Example Image 6 -->
+    <div class="gallery-item">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43syc8zmh/Prem-Mandir.webp" alt="Prem Mandir">
+      <p>Prem Mandir</p>
+    </div>
+
+    <!-- Example Image 7 -->
+    <div class="gallery-item">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43syc8zmh/RAM-MANDIR-scaled.webp" alt="Ayodha Ram Mandir">
+      <p>Ayodha Ram Mandir</p>
+    </div>
+
+    <!-- example 8 -->
+    <div class="gallery-item">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43svmxczc/105.jpg" alt="Konark Sun Temple">
+      <p>Dev Sun Temple</p>
+    </div>
+
+    <!-- example 9 -->
+    <div class="gallery-item">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43syc8zmh/bodgaya.webp" alt="Bodhgaya temple">
+      <p>Bodhgaya temple</p>
+    </div>
+
+    <!-- Example Image 10 -->
+    <div class="gallery-item">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43syc8zmh/mahavir-mandir-1743099448.webp" alt="Hanuman Mandir">
+      <p>Hanuman Mandir</p>
+    </div>
+
+    <!-- Example Image 11 -->
+    <div class="gallery-item">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43syc8zmh/brihadeeswarar1.jpg" alt="Brihadeswar Temple">
+      <p>Brihadeswar Temple</p>
+    </div>
+
+    <!-- 👇 "See More" button (IN SAME ROW) -->
+    <div class="gallery-item" style="display: flex; align-items: center; justify-content: center;">
+      <button id="seeMoreBtn" class="btn btn-outline-primary">See More...</button>
+    </div>
+
+
+    <!-- ✅ Instead just add a class "extra-image hidden" directly -->
+    <!-- image 12 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43sytu9ga/kasi.jpg" alt="Kasi Vishwnath Temple">
+      <p>Kasi Vishwnath Temple</p>
+    </div>
+
+    <!-- image 13 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43sytu9ga/Sree_Padmanabhaswamy_Temple.webp"
+        alt="Sree_Padmanabhaswamy_Temple">
+      <p>Sree_Padmanabhaswamy_Temple</p>
+    </div>
+
+    <!-- image 14 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43sytu9ga/triupati.jpg" alt="Tirupati Temple">
+      <p> Tirupati Temple </p>
+    </div>
+
+    <!-- image 15 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43sytu9ga/meeenakshi%20.jpg" alt="Meenakshi Temple">
+      <p>Meenakshi Temple</p>
+    </div>
+
+    <!-- image 16 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43sytu9ga/rameswaram-city-guide.jpg" alt="Rameswaram Temple">
+      <p>Rameswaram Temple</p>
+    </div>
+
+    <!-- image 17 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43sytu9ga/shore.jpeg" alt="Shore Temple ">
+      <p> Shore Temple </p>
+    </div>
+
+    <!-- image 18 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43sytu9ga/kalash%20.jpg" alt="Kailasa Temple">
+      <p>Kailasa Temple</p>
+    </div>
+
+    <!-- image 19 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43sytu9ga/badrinath.jpg" alt="Badrinath Temple">
+      <p>Badrinath Temple</p>
+    </div>
+
+    <!-- image 20 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43sytu9ga/gangotri-temple-beautiful-view.webp"
+        alt="Gangotri Temple">
+      <p>Gangotri Temple</p>
+    </div>
+
+    <!-- image 21 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43sytu9ga/yamunotri-temple.jpg" alt="Yamunotri Temple">
+      <p>Yamunotri Temple</p>
+    </div>
+
+    <!-- image 22 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43sytu9ga/somnath.jpg" alt="Somnath Temple">
+      <p>Somnath Temple</p>
+    </div>
+
+    <!-- image 23 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43sytu9ga/DWARKA-FEATURE-compressed.jpg"
+        alt="Dwarkadhish Temple –">
+      <p> Dwarkadhish Temple –</p>
+    </div>
+
+
+    <!-- image 24 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43sytu9ga/sun%20temple.jpg" alt="Sun Temple">
+      <p>Sun Temple</p>
+    </div>
+
+    <!-- image 25 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43sytu9ga/PURI_JAGANATHA_TEMPLE,_PURI,_ORISSA,_INDIA,_ASIA.jpg"
+        alt="Jagannath Temple">
+      <p>Jagannath Temple</p>
+    </div>
+
+    <!-- image 26-->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43sytu9ga/Lingaraj%20Temple%20.jpeg" alt="Lingaraj Temple ">
+      <p>Lingaraj Temple </p>
+    </div>
+
+    <!-- image 27 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43sytu9ga/sun_temple_at_konark1-e1746429014599.webp"
+        alt="Konark Sun Temple">
+      <p>Konark Sun Temple</p>
+    </div>
+
+    <!-- image 28 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43sytu9ga/Kamakhya%20Temple.jpeg" alt="Kamakhya Temple ">
+      <p>Kamakhya Temple </p>
+    </div>
+
+    <!-- image 29 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43sytu9ga/Vishnupad%20Temple.jpeg" alt="Vishnupad Temple ">
+      <p>Vishnupad Temple </p>
+    </div>
+
+    <!-- image 30 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43sytu9ga/Mahabodhi%20Temple.jpeg" alt="Mahabodhi Temple ">
+      <p>Mahabodhi Temple </p>
+    </div>
+
+    <!-- image 31 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43sytu9ga/Banke%20Bihari%20Temple.jpg"
+        alt="Banke Bihari Temple ">
+      <p>Banke Bihari Temple </p>
+    </div>
+
+    <!-- image 32 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43t36skdx/Dakshineswar%20Kali%20Temple.jpg"
+        alt="Dakshineswar Kali Temple">
+      <p> Dakshineswar Kali Temple</p>
+    </div>
+
+    <!-- image 33 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43t36skdx/Kalighat%20Temple.avif" alt="Kalighat Temple">
+      <p>Kalighat Temple</p>
+    </div>
+
+    <!-- image 34 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43t36skdx/Amarnath%20Cave%20Temple.jpg"
+        alt="Amarnath Cave Temple">
+      <p>Amarnath Cave Temple</p>
+    </div>
+
+    <!-- image 35 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43t36skdx/Shirdi%20Sai%20Baba%20Temple.jpeg"
+        alt="Shirdi Sai Baba Temple">
+      <p> Shirdi Sai Baba Temple </p>
+    </div>
+
+    <!-- image 36 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43t36skdx/Trimbakeshwar%20Temple.jpeg"
+        alt="Trimbakeshwar Temple ">
+      <p>Trimbakeshwar Temple </p>
+    </div>
+
+    <!-- image 37 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43t36skdx/Bhimashankar%20Temple.avif"
+        alt="Bhimashankar Temple ">
+      <p>Bhimashankar Temple </p>
+    </div>
+
+    <!-- image 38 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43t36skdx/Mahihar%20mata%20.jpeg" alt="Mahihar mata ">
+      <p>Mahihar mata </p>
+    </div>
+
+    <!-- image 39 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43t36skdx/Murudeshwar%20Temple%20.jpg"
+        alt="Murudeshwar Temple ">
+      <p>Murudeshwar Temple </p>
+    </div>
+
+    <!-- image 40 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43t36skdx/Kukke%20Subramanya%20Temple.webp"
+        alt="Kukke Subramanya Temple ">
+      <p>Kukke Subramanya Temple </p>
+    </div>
+
+    <!-- image 41 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43t36skdx/Kanchipuram%20Temples.avif"
+        alt="Kanchipuram Temples ">
+      <p>Kanchipuram Temples </p>
+    </div>
+
+    <!-- image 42 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43t36skdx/Aihole-Durga%20Temple.webp"
+        alt="Aihole-Durga Temple">
+      <p>Aihole-Durga Temple</p>
+    </div>
+
+    <!-- image 43 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43t36skdx/Belur%20and%20Halebidu%20Temples.jpg"
+        alt="Belur and Halebidu Temples">
+      <p>Belur and Halebidu Temples</p>
+    </div>
+
+    <!-- image 44 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43t36skdx/Agra%20Fort.jpg" alt="Red Fort">
+      <p> Red Fort</p>
+    </div>
+
+    <!-- image 45 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43t36skdx/Fatehpur%20Sikri.webp" alt="Fatehpur Sikri ">
+      <p>Fatehpur Sikri </p>
+    </div>
+
+    <!-- image 46 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43t36skdx/Agra-Fort.jpg" alt="Agra FORT">
+      <p>Agra Fort</p>
+    </div>
+
+    <!-- image 47 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43t45ktak/Humayun%E2%80%99s%20Tomb.jpeg" alt="Humayun’s Tomb">
+      <p>Humayun’s Tomb</p>
+    </div>
+
+    <!-- image 48 -->
+    <div class="gallery-item extra-image hidden">
+      <img
+        src="https://uploads.onecompiler.io/43svmx7xu/43t45ktak/bbc886323ff07d295157ea35f423e121-gateway-of-india.jpg"
+        alt="India Gate">
+      <p> Gate ofIndia </p>
+    </div>
+
+    <!-- image 49 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43t45ktak/Rashtrapati-Bhavan.webp" alt="Rashtrapati Bhavan ">
+      <p>Rashtrapati Bhavan </p>
+    </div>
+
+    <!-- image 50 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43t45ktak/Jantar%20Mantar%20.jpg" alt="Jantar Mantar ">
+      <p>Jantar Mantar </p>
+    </div>
+
+    <!-- image 51 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43t45ktak/India%20Gate.jpg" alt="Gateway of India ">
+      <p> India gate</p>
+    </div>
+
+    <!-- image 52 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43t45ktak/Chhatrapati%20Shivaji%20Terminus.jpg"
+        alt="Chhatrapati Shivaji Terminus">
+      <p>Chhatrapati Shivaji Terminus</p>
+    </div>
+
+    <!-- image 53 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43t45ktak/gol-gumbaz-ILFbyAP-2.jpg" alt="Gol Gumbaz">
+      <p> Gol Gumbaz</p>
+    </div>
+
+    <!-- image 54 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43t45ktak/Charminar.jpeg" alt="Charminar">
+      <p>Charminar</p>
+    </div>
+
+    <!-- image 55 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43t45ktak/Golkonda-fort.jpg" alt="Golkonda Fort">
+      <p>Golkonda Fort</p>
+    </div>
+
+    <!-- image 56 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43t45ktak/Hampi%20.jpeg" alt="Hampi ">
+      <p> Hampi </p>
+    </div>
+
+    <!-- image 57 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43t45ktak/Badami%20Caves.jpeg" alt="Badami Caves ">
+      <p>Badami Caves </p>
+    </div>
+
+    <!-- image 58 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43t45ktak/churdhar%20temple%3C.webp" alt="Badami Caves ">
+      <p>churdhar temple</p>
+    </div>
+
+    <!-- image 59 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43t45ktak/Mysore%20Palace.jpeg" alt="Mysore Palace">
+      <p> Mysore Palace</p>
+    </div>
+
+    <!-- image 60 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43t45ktak/Sanchi%20Stupa.jpeg" alt="Sanchi Stupa">
+      <p>Sanchi Stupa</p>
+    </div>
+
+    <!-- image 61 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43t45ktak/khajuraho-fi.webp" alt="Khajuraho Temples">
+      <p>Khajuraho Temples</p>
+    </div>
+
+    <!-- image 62 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43t45ktak/Gwalior%20Fort.jpeg" alt="Gwalior Fort">
+      <p>Gwalior Fort</p>
+    </div>
+
+    <!-- image 63 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43t45ktak/Orchha%20Fort.jpeg" alt="Orchha Fort">
+      <p>Orchha Fort</p>
+    </div>
+
+    <!-- image 64 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43t45ktak/Rani%20ki%20Vav.webp" alt="Rani ki Vav ">
+      <p>Rani ki Vav </p>
+    </div>
+
+    <!-- image 65 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43t45ktak/Champaner-Pavagadh.webp" alt="Champaner-Pavagadh ">
+      <p> Champaner-Pavagadh </p>
+    </div>
+
+    <!-- image 66 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43t45ktak/Junagadh%20Fort.jpg" alt="Junagadh Fort">
+      <p>Junagadh Fort</p>
+    </div>
+
+    <!-- image 67 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43t45ktak/ranthambore-fort-1.jpg" alt="Ranthambore Fort">
+      <p>Ranthambore Fort</p>
+    </div>
+
+    <!-- image 68 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43t45ktak/Amber%20Fort%20.jpg" alt="Amber Fort ">
+      <p>Amber Fort </p>
+    </div>
+
+    <!-- image 69 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43t45ktak/nahargarh-fort-jaipur-travel-rajasthan.jpg"
+        alt="Nahargarh Fort">
+      <p>Nahargarh Fort</p>
+    </div>
+
+    <!-- image 70 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43t45ktak/City%20Palace.jpeg" alt="City Palace">
+      <p>City Palace</p>
+    </div>
+
+    <!-- image 71 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43t45ktak/Hawa%20Mahal.webp" alt="Hawa mahal">
+      <p>Hawa Mahal </p>
+    </div>
+
+    <!-- image 72 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43t45ktak/Jaisalmer%20Fort.webp" alt="Jaisalmer Fort">
+      <p>Jaisalmer Fort</p>
+    </div>
+
+    <!-- image 73 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43t45ktak/Mehrangarh%20Fort.jpeg" alt="Mehrangarh Fort">
+      <p>Mehrangarh Fort</p>
+    </div>
+
+    <!-- image 74 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43t45ktak/Chittorgarh%20Fort.jpeg" alt="Chittorgarh Fort ">
+      <p> Chittorgarh Fort </p>
+    </div>
+
+    <!-- image 75 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43t45ktak/Kumbhalgarh%20Fort.jpeg" alt="Kumbhalgarh Fort">
+      <p>Kumbhalgarh Fort</p>
+    </div>
+
+    <!-- image 76 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43t45ktak/triyuginarayan.jpg" alt="">
+      <p>Triyuginarayan</p>
+    </div>
+
+    <!-- image 77 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43t45ktak/Udaipur%20City%20Palace%20.jpeg"
+        alt="Udaipur City Palace ">
+      <p>Udaipur City Palace </p>
+    </div>
+
+    <!-- image 78 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43t45ktak/Lake%20Palace.jpeg" alt="Lake Palace">
+      <p>Lake Palace</p>
+    </div>
+
+    <!-- image 79 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43t4d6dmg/Bhimbetka%20Rock%20Shelters.webp"
+        alt="Bhimbetaka rock Shelters">
+      <p>Bhimbetka Rock Shelters</p>
+    </div>
+
+    <!-- image 80 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43t4d6dmg/nalanda-university-ruins.jpg"
+        alt="Nalanda University Ruins ">
+      <p>Nalanda University Ruins </p>
+    </div>
+
+    <!-- image 81 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43t4d6dmg/Martand%20Sun%20Temple.avif"
+        alt="Martand Sun Temple">
+      <p>Martand Sun Temple</p>
+    </div>
+
+    <!-- image 82 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43t4d6dmg/Leh%20Palace%20.webp" alt="Leh Palace ">
+      <p>Leh Palace </p>
+    </div>
+
+    <!-- image 83 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43t4d6dmg/Victoria%20Memorial.jpeg" alt="Victoria Memorial ">
+      <p>Victoria Memorial </p>
+    </div>
+
+    <!-- image 84 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43t4d6dmg/Sher%20Shah%20Suri%20Tomb.jpeg"
+        alt="Sher Shah Suri Tomb">
+      <p>Sher Shah Suri Tomb</p>
+    </div>
+
+    <!-- image 85 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43t4d6dmg/Barabar%20Caves.jpeg" alt="Barabar Caves">
+      <p>Barabar Caves</p>
+    </div>
+
+    <!-- image 86 -->
+    <div class="gallery-item extra-image hidden">
+      <img src="https://uploads.onecompiler.io/43svmx7xu/43t4d6dmg/Kesariya%20Stupa.jpeg" alt="Kesariya Stupa">
+      <p> Kesariya Stupa</p>
+    </div>
+
+  </div>
+  
+
+
+
+  <!-- Timeline -->
+  <section class="container py-5" id="timeline">
+    <h2 class="text-center mb-4">📜 Historical Timeline</h2>
+    <div class="d-flex justify-content-center flex-wrap gap-3 mb-4">
+      <button class="btn btn-outline-primary period-btn" data-period="maurya">Maurya Empire</button>
+      <button class="btn btn-outline-primary period-btn" data-period="gupta">Gupta Empire</button>
+      <button class="btn btn-outline-primary period-btn" data-period="chola">Chola Dynasty</button>
+      <button class="btn btn-outline-primary period-btn" data-period="mughal">Mughal Empire</button>
+    </div>
+    <div id="timelineContent"></div>
+  </section>
+
+
+  <!-- TEMPLES & MONUMENTS -->
+  <section class="container py-5" id="monuments">
+    <h2 class="center">🛕 Discover Temples & Monuments Through Wikipedia</h2>
+    <div class="row" id="templeCards"></div>
+  </section>
+
+
+
+
+
+  <!-- map api -->
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Leaflet core -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <!-- Leaflet Control Geocoder -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder@2.4.0/dist/Control.Geocoder.css" />
+  <script src="https://unpkg.com/leaflet-control-geocoder@2.4.0/dist/Control.Geocoder.js"></script>
+
+
+
+  <!-- MAP SECTION -->
+  <section class="container py-5" id="map-section">
+    <h2 class="text-center mb-4">🗺️ Heritage Map of India</h2>
+
+    <div class="card shadow-sm border-0">
+      <!-- Search bar above map -->
+      <div class="card-body pb-2">
+        <div class="d-flex gap-2">
+          <input id="searchInput" class="form-control" type="text"
+            placeholder="Search temples & monuments in India (e.g., Taj Mahal, Hampi)">
+          <button id="searchBtn" class="btn btn-primary">Search</button>
+        </div>
+      </div>
+
+      <!-- Map area with fixed height -->
+      <div class="card-body pt-0">
+        <div id="leafletMap" style="width:77vw; height: 480px; border-radius: 8px; overflow: hidden;"></div>
+      </div>
+    </div>
+  </section>
+
+
+  
+
+
+<!---form -->
+
+<section class="contact-section py-5" id="contact">
+  <div class="container">
+    <h2 class="text-center mb-4">📩 Get in Touch</h2>
+    <p class="text-center text-muted mb-5">
+      Have questions, feedback, or ideas? We’d love to hear from you.
+    </p>
+    <div class="contact-card shadow-lg p-4 rounded">
+      <!-- action hata diya -->
+      <form id="contactForm"> 
+        <div class="mb-3">
+          <label class="form-label fw-bold">Your Name</label>
+          <input type="text" name="name" class="form-control" placeholder="Enter your name" required />
+        </div>
+        <div class="mb-3">
+          <label class="form-label fw-bold">Your Email</label>
+          <input type="email" name="email" class="form-control" placeholder="Enter your email" required />
+        </div>
+        <div class="mb-3">
+          <label class="form-label fw-bold">Your Message</label>
+          <textarea name="message" class="form-control" placeholder="Write your message here..." rows="5"
+            required></textarea>
+        </div>
+        <div class="text-center">
+          <button type="submit" class="btn btn-success px-5 py-2">Send Message</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.getElementById("contactForm").addEventListener("submit", function (e) {
+    e.preventDefault(); // stop page reload
+    if (confirm("Are you sure you want to submit this form?")) {
+      alert("Your message has been submitted ✅");
+      // yahan tum backend add kar sakti ho agar future me chaho
+    } else {
+      alert("Submission cancelled ❌");
+    }
+  });
+</script>
+
+
+
+
+
+  <!-- about -->
+  <section id="about" class="about-section py-5">
+    <div class="container">
+      <div class="about-card shadow-lg p-4 rounded text-center">
+        <h2 class="mb-3">ℹ️ About Us</h2>
+        <p class="text-muted">
+          We are dedicated to digitally preserving India’s rich spiritual and historical heritage.
+          Our content is curated from authentic sources such as the Archaeological Survey of India (ASI) records,
+          historical books, and trusted travel journals to ensure accuracy and depth.
+        </p>
+        <div class="about-icons mt-3">
+          <span title="Heritage">🏛️</span>
+          <span title="Culture">🪔</span>
+          <span title="Travel">🌏</span>
+          <span title="History">📜</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<!--rating-->
+
+<h2 style="text-align:center; margin-bottom: 20px;">What Our Users Say</h2>
+
+
+  <div class="reviews-container">
+    <div class="review-box"> 
+     
+      <img src="https://i.pravatar.cc/50?img=1" alt="User 1">
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+      <p class="comment">"Amazing service!"</p>
+    </div>
+
+    <div class="review-box">
+      <img src="https://i.pravatar.cc/50?img=2" alt="User 2">
+      <div class="stars">⭐⭐⭐⭐</div>
+      <p class="comment">"Very satisfied."</p>
+    </div>
+
+    <div class="review-box">
+      <img src="https://i.pravatar.cc/50?img=3" alt="User 3">
+      <div class="stars">⭐⭐⭐⭐⭐</div>
+      <p class="comment">"Loved it!"</p>
+    </div>
+
+    <div class="review-box">
+      <img src="https://i.pravatar.cc/50?img=4" alt="User 4">
+      <div class="stars">⭐⭐⭐</div>
+      <p class="comment">"Good experience."</p>
+    </div>
+
+    <div class="review-box">
+      <img src="https://i.pravatar.cc/50?img=5" alt="User 5">
+      <div class="stars">⭐⭐⭐⭐</div>
+      <p class="comment">"Will recommend 👍"</p>
+    </div>
+  </div>
+
+
+   <footer>
+    <h3>Rate Us</h3>
+    <div class="stars" id="starRating">
+      <span data-value="1">★</span>
+      <span data-value="2">★</span>
+      <span data-value="3">★</span>
+      <span data-value="4">★</span>
+      <span data-value="5">★</span>
+    </div>
+    <p id="ratingText">Click a star to give rating</p>
+  </footer>
+
+  <script>
+    const stars = document.querySelectorAll("#starRating span");
+    const ratingText = document.getElementById("ratingText");
+
+    stars.forEach(star => {
+      star.addEventListener("click", () => {
+        let rating = star.getAttribute("data-value");
+
+        // Reset all stars
+        stars.forEach(s => s.classList.remove("active"));
+
+        // Fill stars up to selected
+        stars.forEach(s => {
+          if (s.getAttribute("data-value") <= rating) {
+            s.classList.add("active");
+          }
+        });
+
+        // Show rating text
+        ratingText.textContent = "You rated us " + rating + " stars ⭐";
+      });
+    });
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+  <!-- NIGHT MODE TOGGLE -->
+  <!-- <button onclick="toggleNightMode()" class="btn btn-dark m-3">🌙 Night Mode</button> -->
+
+  <!-- SCRIPTS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/js/lightbox-plus-jquery.min.js"></script>
+  <script src="script.js"></script>
+
+</body>
+
+</html>
